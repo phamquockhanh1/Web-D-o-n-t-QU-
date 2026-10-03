@@ -96,14 +96,27 @@ st.markdown("""
     }
 
     /* Ô nhập số có nền sáng và chữ tối */
+    div[data-testid="stNumberInput"] [data-baseweb="input"] {
+        background-color: #FFFFFF !important;
+        border: 1px solid #D8E7E3 !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+    }
+    div[data-testid="stNumberInput"] [data-baseweb="input"]:focus-within {
+        border-color: #168A83 !important;
+        box-shadow: 0 0 0 1px #168A83 !important;
+    }
     div[data-testid="stNumberInput"] input {
         background-color: #FFFFFF !important;
         color: #163B45 !important;
-        border-color: #D8E7E3 !important;
+        border: 0 !important;
+        box-shadow: none !important;
     }
     div[data-testid="stNumberInput"] button {
         background-color: #FFFFFF !important;
         color: #52666B !important;
+        border-color: #D8E7E3 !important;
+        box-shadow: none !important;
     }
     
     /* Tiêu đề các phần */
