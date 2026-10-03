@@ -34,9 +34,9 @@ if GOOGLE_API_KEY:
 # ================= UI & CSS (BẢNG MÀU MỚI - ĐỘ TƯƠNG PHẢN CAO) =================
 st.markdown("""
 <style>
-    /* Nền trang tổng thể: Xám xanh rất nhạt để làm nổi bật các khối màu trắng */
+    /* Nền xanh nước biển nhạt làm nổi bật các khối màu trắng */
     .stApp {
-        background-color: #F4F7F6;
+        background-color: #D9EFF7;
     }
     
     /* Container chính */
