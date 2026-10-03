@@ -36,8 +36,8 @@ st.markdown("""
 <style>
     /* Nền xanh nước biển nhạt làm nổi bật các khối màu trắng */
     .stApp, [data-testid="stAppViewContainer"] {
-        background-color: #D9EFF7;
-        color: #1B262C;
+        background-color: #EFF7F5;
+        color: #163B45;
     }
 
     /* Giữ chữ dễ đọc khi Streamlit đang dùng theme tối */
@@ -47,7 +47,7 @@ st.markdown("""
     .stApp [data-testid="stWidgetLabel"],
     .stApp [data-testid="stWidgetLabel"] p,
     .stApp label {
-        color: #334155 !important;
+        color: #52666B !important;
     }
     
     /* Container chính */
@@ -59,7 +59,7 @@ st.markdown("""
     
     /* Box tiêu đề chính */
     .medical-header {
-        color: #0F4C75 !important; /* Xanh Navy đậm */
+        color: #163B45 !important; /* Xanh than */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 800;
         text-align: center;
@@ -68,7 +68,7 @@ st.markdown("""
         border-radius: 12px;
         box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
         margin-bottom: 30px;
-        border-bottom: 5px solid #3282B8; /* Viền dưới màu xanh dương */
+        border-bottom: 5px solid #168A83;
     }
     
     /* Form nhập liệu (Card trắng nổi lên) */
@@ -77,13 +77,13 @@ st.markdown("""
         padding: 25px;
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-        border: 1px solid #E2E8F0;
+        border: 1px solid #D8E7E3;
     }
     
     /* Style cho các thẻ hiển thị kết quả */
     div[data-testid="metric-container"] {
         background-color: #FFFFFF;
-        border-left: 6px solid #3282B8;
+        border-left: 6px solid #168A83;
         padding: 15px 20px;
         border-radius: 8px;
         box-shadow: 0 3px 10px rgba(0,0,0,0.08);
@@ -91,35 +91,35 @@ st.markdown("""
 
     /* Ép màu chữ cho Metric để không bị lỗi Darkmode */
     div[data-testid="metric-container"] label {
-        color: #475569 !important;
+        color: #52666B !important;
         font-weight: 600;
     }
 
     /* Ô nhập số có nền sáng và chữ tối */
     div[data-testid="stNumberInput"] input {
         background-color: #FFFFFF !important;
-        color: #1B262C !important;
-        border-color: #CBD5E1 !important;
+        color: #163B45 !important;
+        border-color: #D8E7E3 !important;
     }
     div[data-testid="stNumberInput"] button {
         background-color: #FFFFFF !important;
-        color: #334155 !important;
+        color: #52666B !important;
     }
     
     /* Tiêu đề các phần */
     .section-title {
-        color: #1B262C; /* Gần như đen */
+        color: #163B45 !important;
         font-size: 1.4rem;
         font-weight: 700;
         margin-top: 25px;
         margin-bottom: 15px;
-        border-left: 5px solid #3282B8;
+        border-left: 5px solid #168A83;
         padding-left: 12px;
     }
 
     /* Nút Submit chính */
     div[data-testid="stFormSubmitButton"]>button {
-        background-color: #3282B8;
+        background-color: #168A83;
         color: white !important;
         font-size: 1.1rem;
         font-weight: 700;
@@ -130,7 +130,7 @@ st.markdown("""
         transition: all 0.3s ease;
     }
     div[data-testid="stFormSubmitButton"]>button:hover {
-        background-color: #0F4C75; /* Đậm hơn khi hover */
+        background-color: #0F6E69;
         box-shadow: 0 4px 12px rgba(15, 76, 117, 0.3);
     }
 
@@ -141,24 +141,24 @@ st.markdown("""
         font-weight: 600;
         height: 3em;
         background-color: #FFFFFF;
-        color: #0F4C75 !important;
-        border: 1.5px solid #3282B8;
+        color: #163B45 !important;
+        border: 1.5px solid #168A83;
         transition: 0.3s;
     }
     .stDownloadButton>button:hover, .stLinkButton>a:hover {
-        background-color: #3282B8;
+        background-color: #168A83;
         color: #FFFFFF !important;
     }
 
     /* Ép màu chữ cho các Tab */
     .stApp .stTabs [data-baseweb="tab-list"] button {
-        color: #475569 !important;
+        color: #52666B !important;
         font-weight: 600;
         font-size: 1.1rem;
     }
     .stApp .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] {
-        color: #0F4C75 !important;
-        border-bottom-color: #3282B8 !important;
+        color: #163B45 !important;
+        border-bottom-color: #168A83 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -404,7 +404,7 @@ with tab2:
         st.dataframe(feat_df, hide_index=True)
     with col_feat2:
         fig_feat, ax_feat = plt.subplots(figsize=(8, 4))
-        sns.barplot(data=feat_df, x="Importance", y="Feature", color="#3282B8", ax=ax_feat) # Đã sửa lỗi màu teal
+        sns.barplot(data=feat_df, x="Importance", y="Feature", color="#168A83", ax=ax_feat)
         st.pyplot(fig_feat)
 
 with tab3:
