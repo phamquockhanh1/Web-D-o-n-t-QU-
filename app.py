@@ -35,8 +35,19 @@ if GOOGLE_API_KEY:
 st.markdown("""
 <style>
     /* Nền xanh nước biển nhạt làm nổi bật các khối màu trắng */
-    .stApp {
+    .stApp, [data-testid="stAppViewContainer"] {
         background-color: #D9EFF7;
+        color: #1B262C;
+    }
+
+    /* Giữ chữ dễ đọc khi Streamlit đang dùng theme tối */
+    .stApp [data-testid="stMarkdownContainer"],
+    .stApp [data-testid="stMarkdownContainer"] p,
+    .stApp [data-testid="stMarkdownContainer"] li,
+    .stApp [data-testid="stWidgetLabel"],
+    .stApp [data-testid="stWidgetLabel"] p,
+    .stApp label {
+        color: #334155 !important;
     }
     
     /* Container chính */
@@ -48,7 +59,7 @@ st.markdown("""
     
     /* Box tiêu đề chính */
     .medical-header {
-        color: #0F4C75; /* Xanh Navy đậm */
+        color: #0F4C75 !important; /* Xanh Navy đậm */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 800;
         text-align: center;
@@ -82,6 +93,17 @@ st.markdown("""
     div[data-testid="metric-container"] label {
         color: #475569 !important;
         font-weight: 600;
+    }
+
+    /* Ô nhập số có nền sáng và chữ tối */
+    div[data-testid="stNumberInput"] input {
+        background-color: #FFFFFF !important;
+        color: #1B262C !important;
+        border-color: #CBD5E1 !important;
+    }
+    div[data-testid="stNumberInput"] button {
+        background-color: #FFFFFF !important;
+        color: #334155 !important;
     }
     
     /* Tiêu đề các phần */
@@ -129,12 +151,12 @@ st.markdown("""
     }
 
     /* Ép màu chữ cho các Tab */
-    .stTabs [data-baseweb="tab-list"] button {
+    .stApp .stTabs [data-baseweb="tab-list"] button {
         color: #475569 !important;
         font-weight: 600;
         font-size: 1.1rem;
     }
-    .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] {
+    .stApp .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] {
         color: #0F4C75 !important;
         border-bottom-color: #3282B8 !important;
     }
